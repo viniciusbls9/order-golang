@@ -46,6 +46,6 @@ func rabbitmqWorker(msgChan chan amqp.Delivery, uc *usecase.CalculateFinalPrice)
 			panic(err)
 		}
 		msg.Ack(false)
-		fmt.Println(output)
+		fmt.Println("Mensagem processada e salva no banco:", output)
 	}
 }
